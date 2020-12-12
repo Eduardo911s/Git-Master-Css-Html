@@ -8,6 +8,10 @@
     font-style: normal;
     font-weight: normal;}
 
+    @font-face{font-family:"jala";
+        src: url("../css/fonts/FjallaOne-Regular.ttf") format("truetype");
+        font-style: normal;
+        font-weight: normal;}
 /*Estilos generales*/
 *{padding: 0;
  margin: 0;}
@@ -159,8 +163,7 @@ header h1{
         border: 1px solid #cccccc;
         box-shadow: 0px 2px 2px #cccccc;
         font-family: sans-serif,arial,Helvetica;
-        float: left;
-        clear: both;}
+        float: left;}
     .frase div{
         padding:10px;
         font-family: sans-serif;}
@@ -217,4 +220,41 @@ header h1{
 }
 #aula2{
     color: #9B2422;
+}
+/*------ secciones------*/
+.secciones{
+    float: right;
+    width: 75%;
+    font-family: sans-serif,arial,Helvetica;
+    margin-right: 20px;
+}
+.secciones h2{
+    font-size: 24px;
+    margin-bottom: 24px;
+    font-family: "jala";
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: normal;
+    padding-top:2px ;
+    padding-bottom: 10px;
+    border-bottom: solid 1px #ccc;
+}
+.secciones section{
+    border:solid 1px #ccc;
+    box-shadow: 0px 0px 4px #c9c9c9;
+    background-color: white;
+    margin-top: 40px;
+    color:#333333;
+    font-size: 16px;
+    overflow: hidden;
+    padding: 20px;
+}
+.secciones article{
+    margin: 10px;
+    margin-top:20px;
+    margin-bottom: 20px;
+}
+.secciones .fecha{
+    color: gray;
+    font-size: 14px;
 }
