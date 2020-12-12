@@ -144,13 +144,12 @@ header h1{
         color: #666666;
         padding-left:10px;
         transition: all 300ms;}
-    .barra>ul>li>ul>li:hover{
-        background-color: #70b233;
-        box-shadow: 0px0px 5px #cccccc inset;
-    }
     .barra>ul>li>ul>li:hover>a{
         color: white;
-    }
+    }.barra>ul>li>ul>li{background-color:white;}
+    .barra>ul>li>ul>li:hover{
+        background-color: #70b233;
+        box-shadow: 0px0px 5px #cccccc inset;}
     /*------------contenido---------------*/
     .contenido{
         width:1250px;
