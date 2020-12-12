@@ -1,5 +1,6 @@
 /*Fuentes*/
-@font-face{font-family:"hola";
+@font-face{
+    font-family:"hola";
     src: url("../css/fonts/nevis.eot");
     src:url("../css/fonts/nevis.eot?#iefix") format("embedded-opentype"), 
         url("../css/fonts/nevis.woff")format("woff"),
@@ -8,10 +9,24 @@
     font-style: normal;
     font-weight: normal;}
 
-    @font-face{font-family:"jala";
+    @font-face{
+        font-family:"jala";
         src: url("../css/fonts/FjallaOne-Regular.ttf") format("truetype");
         font-style: normal;
         font-weight: normal;}
+        @font-face{
+            font-family:"simbolos";
+            src: url("../css/fonts/websymbols-regular-webfont.svg#WebSymbolRegular") format("svg");
+            src: url("../css/fonts/websymbols-regular-webfont.eot");
+            src: url("../css/fonts/websymbols-regular-webfont.eot?#iefix") format("embedded-opentype");
+            src: url("../css/fonts/websymbols-regular-webfont.woff") format("woff");
+            src: url("../css/fonts/websymbols-regular-webfont.ttf") format("truetype");           
+            font-style: normal;
+            font-weight: normal;}
+/*-------clear----------*/
+.clear{
+    clear: both;
+}
 /*Estilos generales*/
 *{padding: 0;
  margin: 0;}
@@ -152,9 +167,10 @@ header h1{
         box-shadow: 0px0px 5px #cccccc inset;}
     /*------------contenido---------------*/
     .contenido{
+        min-height: 1100px;
         width:1250px;
-        min-height:1100px; 
-        margin: 0 auto;}
+        margin: 0 auto;
+        font-family: sans-serif,arial,Helvetica;}
     /*--lateral--*/
     .lateral,.frase{width:200px;
         background-color: white;
@@ -234,7 +250,6 @@ header h1{
     text-align: center;
     letter-spacing: 1px;
     font-weight: normal;
-    padding-top:2px ;
     padding-bottom: 10px;
     border-bottom: solid 1px #ccc;
 }
@@ -256,4 +271,49 @@ header h1{
 .secciones .fecha{
     color: gray;
     font-size: 14px;
+}
+.noticias__h3--backend{
+    color: #9B2447;
+}
+.noticias__h3--instructor{
+    color: #D69D2A;
+}
+.icono{
+    font-family: "simbolos";}
+.historico{
+    float: right;
+    clear: both;
+    margin-top: 10px;
+    margin-right: 20px;
+}
+/*---------------------stikers------------------------*/
+.stiker1,.stiker2{
+    position: absolute;
+    margin-top: -38px;
+    z-index: 100;
+}
+.stiker2{
+    margin-left: 860px;
+}
+/*--------footer----------------*/
+.footer{
+    background-color: #333333;
+    clear: both;
+    font-family: sans-serif;
+    box-shadow: 0px 0px 2px gray;
+    font-size: 14px;
+    margin-top:40px;
+    padding-top: 10px; ;
+    padding-bottom: 10px;}
+.footer p{
+    color: white;
+    text-align: center;
+}
+.footer p a{
+    color: white;
+    text-decoration: underline;
+}
+.footer p a:hover{
+    color: blue;
+    text-decoration: none;
 }
