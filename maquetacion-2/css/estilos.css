@@ -29,6 +29,12 @@
 body {
    background: url(../img/pattern.png);
 }
+.clear{
+    clear: both;
+}
+.icono{
+    font-family: "websymbol";
+}
 /*--------header-------------*/
 #engranaje{
     font-family: "websymbol";
@@ -92,3 +98,139 @@ header{
     color: #37bcf9;
     transform: scale(1.2,1.2);
 }
+/*-------banner-------*/
+.banner{
+    width: 95.6%;
+    height: 100px;
+    border: solid white 10px;
+    box-shadow: 0px 0px 2px gray; 
+    background: url(../img/bakbaner.png);
+    margin:20px auto;
+    background-position: -200px -200px;
+}
+.banner h1{
+    text-align: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 50px;
+    line-height: 100px;
+    font-family:"bebas";
+    text-shadow: 2px 2px 2px black;
+}
+/*--------- tarjetas-------¨*/
+.card__icono{
+    font-family:"websymbol";
+    font-size: 50px;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    display: block;
+}
+.card{  
+    width: 205px;
+    height: 305px;
+    overflow: hidden;
+    margin:16.508px; 
+    margin-top: 35px;  
+    border: solid 1px #ccc;
+    box-shadow: 1px 1px 2px #ddd;
+    float: left;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+}
+.card__h2{
+    font-weight: bold;
+    font-size: 21px;
+    font-family: "trebuche";
+}
+.card__h2,.card__p{
+    color: #02609e;
+}
+.card__p{
+    display: block;
+    margin-top: 20px;
+    padding: 5px;
+    font-family: "trebuche";
+    font-size: 15px;
+}
+/*-------------------ASIDE----------------*/
+.aside{
+    float:right;
+    width: 300px;
+    min-height: 1200px;
+    font-family: "trabuche";
+    margin: 20px;
+}
+.aside__h3{
+    display: block;
+    width: auto;
+    height: 45px;
+    line-height: 50px;
+    background: url(../img/pxgray.png), white ;
+    box-shadow: 0px 1px 1px #7e8081,1px 2px 0px #7e8081,2px 3px 0px #7e8081,3px 4px 0px #7e8081;
+    font-size: 30px;
+    font-family: "bebas";
+    letter-spacing: 2px;
+    padding-left :15px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.buscar{
+    width: 90%;
+    height: 30px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px;
+    border:solid 1px #ccc;
+    box-shadow: 1px 1px 4px #ccc inset;
+}
+.buscar input[type=text]{
+    width: 85%;
+    height: 100%;
+    padding-left: 5px;
+    padding-top: 5px;
+    padding-bottom: 1px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #ccc;
+    border: none;
+    transition: all 200ms;
+}
+.buscar input[type=text]:focus{
+    color:#555;
+}
+.buscar input[type=button]{
+    width: 10%;
+    height: 30px;
+    background-color: transparent;
+    color:#555;
+    border: none;
+    border-left: 1px solid #ccc;
+    cursor: pointer;
+}
+.aside__box{
+    background-color: white;
+    box-shadow:0px 0px 1px rgba(0,0,0,0.3),0px 3px 7px rgba(0,0,0,0.3),0px 1px white inset,0px -3px rgba(0,0,0,0.3) inset;
+    margin: 0 auto;
+}
+#login{
+    width: 90%;
+    height: 240px;
+}
+#login input[type=email],#login input[type=password]{
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 30px;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 1px #ccc inset;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding-left: 30px;
+    color: #ccc;
+    transition: all 200ms;}
+
+    #login input[type=email]:focus,#login input[type=password]:focus{
+        color: #555;
+        box-shadow:1px 1px 1xp gray inset;
+    }
