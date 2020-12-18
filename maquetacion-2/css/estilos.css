@@ -43,6 +43,35 @@ body {
     float: left;
     font-size: 40px;
     margin-left: 20px;
+    margin-top: 2.5px;
+    animation-name: rotation-gear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:linear ;
+}
+
+@keyframes rotation-gear{
+    from{
+        transform:rotateZ(0deg);
+    }
+    to{
+        transform:rotateZ(360deg) ;
+    }
+}
+#logo:hover #engranaje{
+    animation: frombellow linear 500ms;
+    margin-top: 0px;
+}
+@keyframes frombellow{
+        0%{
+            transform: translateY(0%);
+        }
+        50%{
+            transform: translateY(200%);
+        }
+        100%{
+            transform: translateY(0%);
+        }
 }
 .wrap{
     width: 1200px;
@@ -68,6 +97,12 @@ header{
     transition: all 300ms;
     margin-top:8px;
     margin-left: 20px;
+    transition: all 300ms;
+}
+#logo:hover{
+    color:black;
+    background-color: #ccc;
+    border-radius: 2px;
 }
 #logo h3{
     font-size: 40px;
@@ -75,7 +110,18 @@ header{
     float: left;
     margin-top: 5px;
     margin-left: 20px;
-    transition: all 300ms;
+    letter-spacing: 3px;
+}
+#logo:hover h3{
+    animation:fromrigth linear 300ms; 
+}
+@keyframes fromrigth{
+    from{
+        transform: translateX(200%);
+    }
+    to{
+        transform: translateX(0%);
+    }
 }
 /*menu*/
 #menu{
@@ -107,7 +153,17 @@ header{
     box-shadow: 0px 0px 2px gray; 
     background: url(../img/bakbaner.png);
     margin:20px auto;
-    background-position: -200px -200px;
+    background-position: -250px -250px;
+    animation: backbanner 10s linear;
+    overflow: hidden;
+}
+@keyframes backbanner{
+    0%{
+        background-position: 0px 0px;
+    }
+    100%{
+        background-position: -250px -250px;
+    }
 }
 .banner h1{
     text-align: center;
@@ -117,6 +173,29 @@ header{
     line-height: 100px;
     font-family:"bebas";
     text-shadow: 2px 2px 2px black;
+    animation:showtext 10s linear ;
+}
+@keyframes showtext{
+    0%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 1;
+    }
+    50%{
+        transform: translateX(600%) scale(5,5);
+        opacity: 1;
+    }
+    75%{
+        transform: translateX(-600%) scale(5,5);
+        opacity: 0;
+        text-shadow: none;
+        color: transparent;
+    }
+    100%{
+        transform: translateX(0%) scale(1,1);
+        text-shadow: 2px 2px 2px black;
+        opacity: 1;
+        color: white;
+    }
 }
 /*--------- tarjetas-------¨*/
 .card__icono{
@@ -125,6 +204,20 @@ header{
     margin-top: 30px;
     margin-bottom: 40px;
     display: block;
+}
+.card:hover .card__icono{
+    color: #37bcf9;
+    font-size: 70px;
+    animation: showicon 300ms linear;
+    transition: all 300ms
+}
+@keyframes showicon{
+    from{
+        transform: translateY(-200%);
+    }
+    to{
+        transform: translateY(0%);
+    }
 }
 .card{  
     width: 205px;
@@ -138,7 +231,13 @@ header{
     text-align: center;
     background-color: white;
     cursor: pointer;
+    transition: all 300ms;
 }
+.card:hover{
+    background-color: black;
+}
+
+
 .card__h2{
     font-weight: bold;
     font-size: 21px;
@@ -152,7 +251,37 @@ header{
     margin-top: 20px;
     padding: 5px;
     font-family: "trebuche";
-    font-size: 15px;
+    font-size: 15px;  
+}
+.card:hover .card__p{
+    color: white;
+    animation: linear 400ms showdescription;
+}
+@keyframes showdescription {
+    from{
+        transform: translateX(-300%);
+        color: black;
+    }
+
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.card:hover .card__h2{
+    transition: all 300ms;
+    color: white;
+    animation: showcategory 400ms linear;
+}
+@keyframes showcategory{
+    from{
+        transform: translateY(-300%);
+        color: black;
+    }
+    to{
+        transform: translateY(0%);
+        color: white;
+    }
 }
 /*-------------------ASIDE----------------*/
 .aside{
@@ -234,7 +363,7 @@ header{
 
     #login input[type=email]:focus,#login input[type=password]:focus{
         color: #555;
-        box-shadow:1px 1px 1xp gray inset;
+        box-shadow:1px 1px 1px gray inset;
     }
 
 #user{
@@ -268,7 +397,7 @@ header{
     border-radius: 0px;
     font-family: "trebuhce";
     font-size: 15px;
-    transition: all 300px ;
+    transition: all 300ms;
     margin-bottom: 15px;
 }
 #login input[type="submit"]:hover,#login input[type="button"]:hover,#login input[type=reset]:hover{
@@ -301,6 +430,31 @@ box-shadow: 0px 0px 4px gray inset;}
     height: 200px;
     width: 250px;
     padding-top: 2.5px;
+}
+
+#redes .overlay{
+    display: block;
+    height: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    text-shadow: 0px 0px 1px #ccc;
+    font-weight: bold;
+    border:3px solid white;
+    box-shadow: 0px 0px 4px #ccc;
+    background-color: #f4f7fe;
+    position: absolute;
+    padding:8px;
+    margin-left: 62px;
+    margin-top: -35px;
+    transform: translateX(-80%);
+    opacity: 0;
+    cursor: pointer;
+    transition:all 500ms;
+}
+
+#redes div:hover .overlay{
+    opacity: 1;
+    transform: translateX(0%);
 }
 /*-------articulos---------*/
 .articulos{
@@ -439,6 +593,10 @@ footer iframe{
 footer img{
     margin-bottom: 15px;
 }
-#navegadores img{
+#navegadores a{
     width: 40px;
+    display: inline-block;
+}
+#navegadores img{
+    width: 100%;
 }
