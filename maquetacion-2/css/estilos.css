@@ -2,6 +2,7 @@
 *{
     margin: 0;
     padding: 0;}
+
 /*-------------fuentes---------------*/
 @font-face{
     font-family: "trebuche";
@@ -337,6 +338,9 @@ header{
     border: none;
     border-left: 1px solid #ccc;
     cursor: pointer;
+}
+input:focus{
+    outline: none !important;
 }
 .aside__box{
     background-color: white;
