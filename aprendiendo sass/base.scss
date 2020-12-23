@@ -1,3 +1,8 @@
+//para compilar se usa en el cmd de windows el sigiente comando
+//sass --watch (archivo de entrada) (archivo de salida)
+//mientras este la consola abierta compilara de forma automatica 
+
+
 //variables
 $color-tipico:#ccc;
 $fuente-tipica:sans-serif,arial,helvetica;
@@ -47,6 +52,8 @@ p{
 }
 .caja{
 @include variables(blue,2px ,black )}
+
+
 //sass tambien tiene condicionales para hacer operaciones
 //como en cualquier leguaje de programacion corriente
 

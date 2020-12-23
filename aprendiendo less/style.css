@@ -1,0 +1,10 @@
+h1 {
+  color: red;
+}
+p {
+  color: blue;
+}
+div {
+  box-shadow: 0px 0px 3px black;
+  text-shadow: 0px 0px 3px black;
+}

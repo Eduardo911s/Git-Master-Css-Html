@@ -1,0 +1,26 @@
+//para compilar se usa en el cmd de windows 
+//lessc (archivo de entrada)(archivo de salida)
+//esto cada vez que se quiera compilar
+//variables
+//para definir una variable se usa el @ ej:
+@color-fondo:#ccc;
+@titulo:h1;
+@color-titulos:red;
+@color-parrafos:blue;
+//se pueden usar variables como selectores 
+@{titulo}{
+color: @color-titulos;
+}
+p{
+color: @color-parrafos;
+}
+//anidacion igual que sass
+//mixin 
+.sombras(){
+    box-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 3px black;
+}
+
+div{
+    .sombras();
+}
