@@ -1,12 +1,3 @@
-$color-tipico:#ccc;
-$fuente-tipica:sans-serif,arial,helvetica;
-$color-letra:red;
-
-h1{
-    font:$fuente-tipica;
-    color:$color-letra;}
-body{
-    background-color:$color-tipico;}
-p{
-    color: $color-letra;
-}
+//modulos
+@use"base";
+@use 'complemento';

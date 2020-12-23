@@ -1,0 +1,82 @@
+//variables
+$color-tipico:#ccc;
+$fuente-tipica:sans-serif,arial,helvetica;
+$color-letra:red;
+$color-secundario:rgb(160,20,20);   
+//anidacion
+h1{
+    font:$fuente-tipica;
+    color:$color-letra;}
+body{
+    background-color:$color-tipico;}
+p{
+    color: $color-secundario;
+    font: $fuente-tipica;
+}
+.caja{
+    h1{
+        color: $color-letra;
+    }
+    p{
+        color: $color-secundario;
+    }
+    .info{
+        color:rgb(100,200,100);
+        font: {
+            family:helvetica;
+            size:20px;
+            weight:bold;
+        }
+    }
+}
+//mixins--funciones
+@mixin bordes(){
+    color:$color-secundario;
+    border: solid red 1px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px black;
+}
+.listado{
+    @include bordes;   
+}
+//ejmplo de mixins con variables
+@mixin variables($color,$size,$shadow) {
+    color: $color;
+    border:solid $color $size;
+    box-shadow: 0px 0px 4px $shadow;    
+}
+.caja{
+@include variables(blue,2px ,black )}
+//sass tambien tiene condicionales para hacer operaciones
+//como en cualquier leguaje de programacion corriente
+
+
+//for  -if
+$color-tipico:#ddd;
+h1{
+@if $color-tipico == #ccc {
+    color:rgb(100, 100,250);}
+        @else {
+            color:rgb(100,50,50);
+        }
+
+}
+//Each
+$contador:1;
+@for $contador from 1 through 10 {
+    .listado ul li:nth-child(#{$contador}) {
+        font-size: $contador + 10px;
+    }
+}
+//while
+
+
+
+
+
+
+
+
+
+
+
