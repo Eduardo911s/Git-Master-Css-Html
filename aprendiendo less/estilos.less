@@ -16,6 +16,15 @@ color: @color-parrafos;
 }
 //anidacion igual que sass
 //mixin 
+.sombras() {
+    box-shadow: 0px 0px 3px black;
+    text-shadow: 0px 0px 3px black;
+}
+
+div {
+    .sombras();
+}
+// se le pueden agregar variables como a sass
 .sombras(){
     box-shadow: 0px 0px 3px black;
     text-shadow: 0px 0px 3px black;
