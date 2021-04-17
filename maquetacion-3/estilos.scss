@@ -11,9 +11,7 @@
     padding: 0;
     font-family: sans-serif;
     list-style: none;
-    float: none;
-}
-
+    float: none;}
 .contenido{
     width: 90%;
     height: auto;
@@ -173,7 +171,7 @@ footer .info{
         margin-top: 20px;
     }
 }
-@media(max-width:616px){
+@media(max-width:618px){
     footer .logo{
         order:1;
         margin: 0;
@@ -190,5 +188,14 @@ footer .info{
         flex-basis: 100%;
         text-align: center;
 
+    }
+}
+
+@media(max-width:685px){
+    .content{flex-wrap: wrap;
+        flex-direction: column;}
+
+    aside{
+        margin-right: 0px;
     }
 }
